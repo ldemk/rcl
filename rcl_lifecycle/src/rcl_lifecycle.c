@@ -53,6 +53,8 @@ rcl_lifecycle_state_init(
   const char * label,
   const rcl_allocator_t * allocator)
 {
+  RCUTILS_CAN_RETURN_WITH_ERROR_OF(RCL_RET_ERROR);
+
   if (!allocator) {
     RCL_SET_ERROR_MSG("can't initialize state, no allocator given\n");
     return RCL_RET_ERROR;
